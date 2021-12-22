@@ -1,0 +1,297 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+//  metoda == funkcja
+        static void metoda(string tekst)    //  deklaracja metody
+        {
+            Console.WriteLine(tekst);
+        }
+//  pole prostokata metoda
+        static int prostokat(int a, int b)
+        {
+            int p = a * b;
+            return p;
+        }
+//  pole trojkata metoda
+        static float trojkat(float a, float h)
+        {
+            float p = a * h / 2;
+            return p;
+        }
+//  ile jest liczb podzielnych metoda
+        static int podzielna(int pocz, int kon, int p_przez)
+        {
+            int policz = 0;
+            for (int i = pocz;i <= kon; i++)
+            {
+                if (i % p_przez == 0)
+                    policz++;
+            }
+            return policz;
+        }
+
+        static void Main(string[] args)
+        {
+            
+            
+            
+            /*
+//  ile jest liczb podzielnych metoda
+            int ile = podzielna(1, 1000, 7);
+            Console.WriteLine(ile);
+            */
+
+            /*
+//  pole trojkata metoda
+            float a, h;
+            Console.Write("Podaj bok: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Podaj wysokosc: ");
+            h = int.Parse(Console.ReadLine());
+            Console.WriteLine("Pole jest rowne: " + trojkat(a, h));
+            */
+
+            /*
+//  pole prostokata metoda
+            int p_bok, d_bok;
+            Console.Write("Podaj pierwszy bok: ");
+            p_bok = int.Parse(Console.ReadLine());
+            Console.Write("Podaj drugi bok: ");
+            d_bok = int.Parse(Console.ReadLine());
+            int wynik = prostokat(p_bok, d_bok);
+            Console.WriteLine("Pole jest rowne: " + wynik);
+            */
+
+            //  metoda przyklad
+            //  metoda("Witaj Swiecie !!!");   //  wywolanie metody
+
+            /*
+//  string zaawansowany
+            string napis = "     Witaj swiecie    ";
+            int ile = napis.Length; //  ilosc znakow
+            Console.WriteLine(ile);
+            int polozenie = napis.IndexOf("j"); //  polozenie konkretnego znaku (liczone od 0)
+            Console.WriteLine(polozenie);
+            polozenie = napis.LastIndexOf("i"); //  ostatnie wystepowanie znaku
+            Console.WriteLine(polozenie);
+            string pokaz = napis.Substring(6, 3);   //  pobierane od jakiejsc pozycji, ilosc znakow do pobrania
+            Console.WriteLine(pokaz);
+            pokaz = napis.Insert(13, " hello world");   //  w jakiej pozycji, co wpisac
+            Console.WriteLine(pokaz);
+            pokaz = napis.ToUpper();    //  duze napisy
+            Console.WriteLine(pokaz);
+            pokaz = napis.ToLower();    //  male napisy
+            Console.WriteLine(pokaz);
+            pokaz = napis.Trim();   //  usuwa spacje
+            Console.WriteLine(pokaz);
+            */
+
+            /*
+//  switch oceny
+            int a;
+            Console.Write("Podaj ocene: ");
+            a = int.Parse(Console.ReadLine());
+            string opis;
+            switch (a)
+            {
+                case 1: opis = "piepromowany"; break;
+                case 2: opis = "przepuszczony"; break;
+                case 3: opis = "promowany"; break;
+                case 4: opis = "promowany"; break;
+                case 5: opis = "czerwony pasek"; break;
+                case 6: opis = "Czerwony pasek"; break;
+                default: opis = "brak oceny"; break;
+            }
+            Console.WriteLine(opis);
+            */
+
+            /*
+//  switch RANDOM
+            Random r = new Random();
+            int n = r.Next(8);  //  losowanie liczb od 0 do 7
+            string opis;
+            switch(n)
+            {
+                case 1: opis = "Niedziela"; break;
+                case 2: opis = "Poniedzialek"; break;
+                case 3: opis = "Wtorek"; break;
+                case 4: opis = "Sroda"; break;
+                case 5: opis = "Czartek"; break;
+                case 6: opis = "Piatek"; break;
+                case 7: opis = "Sobota"; break;
+                default: opis = "blad"; break;
+            }
+
+            //  if (n == 1) opis = "Niedziela";  //  alternatywna wersja
+            //  else if (n == 2) opis = "Poniedzialek";
+            //  else if (n == 3) opis = "Wtorek";
+            //  else if (n == 4) opis = "Sroda";
+            //  else if (n == 5) opis = "Czwartek";
+            //  else if (n == 6) opis = "Piatek";
+            //  else if (n == 7) opis = "Sobota";
+            //  else opis = "Blad";
+            
+            Console.WriteLine("Dzien tygodnia: " + n +", " + opis);
+            */
+
+            /*
+// tablice
+            int[] a = new int[1000];    //  tworzenie tablicy a
+            for (int i = 0; i < 1000; i++) a[i] = i + 1;
+            int[] h = new int[1001];    //  tworzenie tablicy h
+            for (int i = 0; i < 1000; i++) h[i] = i + 1;
+            int[] pole_t = new int[1000];   //  obliczanie pola
+            for (int i = 0; i < 1000; i++) pole_t[i] = (a[i] * h[i]) / 2;
+            int[] duze_pole = new int[1000];    //  IF duze pole
+            for (int i = 0; i < 1000; i++)
+            {
+                if (pole_t[i] > 300)
+                {
+                    duze_pole[i] = pole_t[i];
+                }
+            }
+            int j = 0;  // cyferki
+            for (int i = 0; i < 1000; i++)
+            {
+                if (duze_pole[i] > 0)
+                    j++;
+            }
+            Console.WriteLine("Jest " + j + " duzych pol.");    //  wypisanie
+            */
+
+            /*
+//  sprawdzanie pelnoletnosci
+            int wiek;
+            Console.Write("Ile masz lat? Podaj wiek: ");
+            wiek = int.Parse(Console.ReadLine());
+            if (wiek > 18) Console.WriteLine("Jestes pelnoletni");  //  instrukacja warunkowa IF
+            else if (wiek == 18) Console.WriteLine("Jestes pelnoletni!!!");
+            else Console.WriteLine("Nie jestes pelnoletni");
+            */
+
+            /*
+// czy mozesz zostac prezydentem?
+            int wiek;
+            Console.Write("Ile masz lat? Podaj wiek: ");
+            wiek = int.Parse(Console.ReadLine());
+            if (wiek > 35||(wiek==35)) Console.WriteLine("Mozesz zostac prezydentem");  //  instrukacja warunkowa IF
+            else if (wiek < 35 && wiek >= 18) Console.WriteLine("Jestes pelnoletni, ale nie mozesz zostac prezydentem");
+            else Console.WriteLine("Nie jestes pelnoletni");
+            */
+
+            /*
+//obliczanie pierwiastkow rownania kwadratowego
+            double a, b, c, delta,x1,x2,x0;
+            Console.Write("Podaj ax^2: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Podaj bx: ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("Podaj c: ");
+            c = int.Parse(Console.ReadLine());
+            delta = ((b * b)+(-4) * a * c);
+            Console.WriteLine("Delta jest rowna: " + delta);
+            Console.WriteLine("Pierwiastek z delty to: " + Math.Sqrt(delta));   //  zastosowanie biblioteki math.h
+            if(Math.Sqrt(delta)>0)
+            {
+                x1 = (((-b) + (Math.Sqrt(delta))) / (2 * a));
+                x2 = (((-b) - (Math.Sqrt(delta))) / (2 * a));
+                Console.WriteLine("Rownanie posiada dwa pierwiastki i wynosza one: " + x1 + " i " + x2);
+            }
+            else if(Math.Sqrt(delta)==0)
+            {
+                x0 = ((-b) / (2 * a));
+                Console.WriteLine("Rownanie posiada jeden pierwiastek i wynosi on: " + x0);
+            }
+            else Console.WriteLine("Rownanie nie posiada pierwiastka");
+            */
+
+            /*
+//petla
+            for(int i=0;i<=100;i=i+4)
+            {
+                Console.WriteLine(i + " ");
+            }
+            */
+
+            /*
+//zastosowanie petli
+            int y = 2, x = 2;
+            for (int i = 0; i <= 10; i++)
+                if (x < 20) x = x + i;
+                else y = x + y;
+            Console.WriteLine("X wynosi: " + x + " Y wynosi: " + y);
+            */
+
+            /*
+//petla while
+            int i = 5;
+            while(i>=3)
+            {
+                Console.WriteLine("Iteracja numer: " + i + " jestes w petli while");
+                i = i - 1;
+            }
+            Console.WriteLine("Jestes poza petla while");
+            */
+
+            /*
+//petla do while
+            int i = 5;
+            do
+            {
+                Console.Write("Jestes w petli do while");
+            } while (i < 0);
+            Console.Write("Jestes poza petla do while");
+            */
+
+            /*
+//  dodawanie 2 liczb
+            int x;
+            int y;
+            int z;
+
+            Console.Write("Podaj x: ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Podaj y: ");
+            y = int.Parse(Console.ReadLine());
+            z = x + y;
+            Console.WriteLine("Wynik dodania " + x + " + " + y + " to: " + z);
+            */
+
+            /*
+//  pole trojkata
+            float a,h;
+
+            Console.Write("Podaj bok a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Podaj wysokosc: ");
+            h = int.Parse(Console.ReadLine());
+            Console.WriteLine("Pole trojkata wynosi: " + (a * h) / 2);
+            */
+
+            /*
+//   typy zmiennych
+            long y = 0;
+            string n = " ";
+            float z = 1.0f;
+            double z1 = 0.0;
+            char x1 = 'M';
+            bool w1 = true;
+            */
+
+            //   x = x + 1; //  ++x
+
+            //   a=2,c=5    //  mnozenie 2 liczb
+            //   a *= c; //  a=a*c
+            //   Console.WriteLine(a);
+
+            //   Console.WriteLine(x++); //  najpierw wyswietla wartosc pozniej inkrementuje
+            //   Console.WriteLine(x); //    wynik po inkrementacji
+
+            //   Console.Write("Hello World! ");
+            //   Console.WriteLine("Testujemy strumien wyjsciowy");
+        }
+    }
+}
