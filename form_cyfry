@@ -1,0 +1,472 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+
+
+
+namespace WindowsFormsApp18
+{
+    public partial class Form1 : Form
+    {
+        string a = " ", temp = "";
+        int a1 = 0;
+        public Form1()
+        {
+
+            InitializeComponent();
+            //  textBox1.Enabled = false;
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            textBox7.Text = "0";
+            textBox5.Text = "0";
+            radioButton19.Checked = true;
+            radioButton21.Checked = true;
+            radioButton31.Checked = true;
+            radioButton4.Checked = true;
+            groupBox6.Hide();
+            groupBox9.Hide();
+            groupBox10.Hide();
+            groupBox11.Hide();
+            groupBox7.Hide();
+            groupBox8.Hide();
+            groupBox12.Hide();
+            groupBox13.Hide();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+
+
+
+
+            //a1 = int.Parse(textBox11.Text);
+
+
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton40_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox7.Text = "100";
+            textBox6.Text = "sto";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void t1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "1000";
+            textBox8.Text = "tysiąc";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "2000";
+            textBox8.Text = "dwa tysiące";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton19_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+            textBox8.ResetText();
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "3000";
+            textBox8.Text = "trzy tysiące";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton38_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox7.Text = "300";
+            textBox6.Text = "trzysta";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton31_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox7.Text = "0";
+            textBox6.ResetText();
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+
+        }
+
+        private void radioButton28_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = "30";
+            textBox3.Text = "trzydzieści";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                groupBox6.Show();
+                groupBox9.Show();
+                groupBox10.Show();
+                groupBox11.Show();
+            }
+            else
+            {
+                groupBox6.Hide();
+                groupBox9.Hide();
+                groupBox10.Hide();
+                groupBox11.Hide();
+
+            }
+
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "10" && textBox2.Text == "1")
+            {
+                textBox9.Text = "jedenaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "2")
+            {
+                textBox9.Text = "dwanaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "3")
+            {
+                textBox9.Text = "trzynaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "4")
+            {
+                textBox9.Text = "czternaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "5")
+            {
+                textBox9.Text = "piętnaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "6")
+            {
+                textBox9.Text = "szestnaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "7")
+            {
+                textBox9.Text = "siedemnaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "8")
+            {
+                textBox9.Text = "osiemnaście";
+            }
+            else if (textBox5.Text == "10" && textBox2.Text == "9")
+            {
+                textBox9.Text = "dzięwietnaście";
+            }
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton30_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = "10";
+            textBox3.Text = "dziesięć";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "2";
+            textBox4.Text = "dwa";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton20_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "1";
+            textBox4.Text = "jeden";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "0";
+            textBox4.ResetText();
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+
+        }
+
+        private void radioButton21_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = "0";
+            textBox3.ResetText();
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox12.Text == radioButton20.Text || textBox12.Text == "jeden" || textBox12.Text == "jeden ")
+            {
+                radioButton31.Checked = true;
+                radioButton19.Checked = true;
+                radioButton21.Checked = true;
+                radioButton20.Checked = true;
+
+            }
+            else if (textBox12.Text == "12" || textBox12.Text == "dwanaście" || textBox12.Text == "dwanaście ")
+            {
+                radioButton12.Checked = true;
+                radioButton30.Checked = true;
+                radioButton19.Checked = true;
+                radioButton31.Checked = true;
+
+            }
+
+            else if (textBox12.Text == "123" || textBox12.Text == "sto dwadzieścia trzy" || textBox12.Text == "sto dwadzieścia trzy ")
+            {
+                radioButton40.Checked = true;
+                radioButton29.Checked = true;
+                radioButton11.Checked = true;
+                radioButton19.Checked = true;
+
+
+            }
+            else if (textBox12.Text == "1234" || textBox12.Text == "tysiąc dwieście trzydzieści cztery" || textBox12.Text == "tysiąc dwieście trzydzieści cztery ")
+            {
+                radioButton10.Checked = true;
+                radioButton28.Checked = true;
+                radioButton39.Checked = true;
+                t1.Checked = true;
+
+            }
+
+            else if (textBox12.Text == "1230" || textBox12.Text == "tysiąc dwieście trzydzieści" || textBox12.Text == "tysiąc dwieście trzydzieści ")
+            {
+
+                radioButton4.Checked = true;
+                radioButton28.Checked = true;
+                radioButton39.Checked = true;
+                t1.Checked = true;
+
+            }
+            else if (textBox12.Text == "1200" || textBox12.Text == "tysiąc dwieście" || textBox12.Text == "tysiąc dwieście ")
+            {
+
+                radioButton4.Checked = true;
+                radioButton21.Checked = true;
+                radioButton39.Checked = true;
+                t1.Checked = true;
+
+            }
+            else if (textBox12.Text == "1000" || textBox12.Text == "tysiąc" || textBox12.Text == "tysiąc ")
+            {
+
+                radioButton4.Checked = true;
+                radioButton21.Checked = true;
+                radioButton31.Checked = true;
+                t1.Checked = true;
+
+            }
+            else if (textBox12.Text == "0" || textBox12.Text == "")
+            {
+
+                radioButton19.Checked = true;
+                radioButton21.Checked = true;
+                radioButton31.Checked = true;
+                radioButton4.Checked = true;
+
+            }
+            else
+            {
+
+                radioButton31.Checked = true;
+                radioButton19.Checked = true;
+                radioButton21.Checked = true;
+                radioButton4.Checked = true;
+            }
+        }
+
+        private void radioButton39_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox7.Text = "200";
+            textBox6.Text = "dwieście";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton29_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = "20";
+            textBox3.Text = "dwadzieścia";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "4";
+            textBox4.Text = "cztery";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+        private void radioButton11_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "3";
+            textBox4.Text = "trzy";
+            textBox9.Text = textBox8.Text + a + textBox6.Text + a + textBox3.Text + a + textBox4.Text;
+            a1 = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox5.Text) + int.Parse(textBox7.Text);
+            temp = Convert.ToString(a1);
+            textBox11.Text = temp;
+        }
+
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "zaznaczenie";
+
+        }
+
+        private void radioButton41_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "zaznaczenie3";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            textBox13.Text = openFileDialog1.FileName;
+            // StreamWriter zapisz_plik;
+            //   zapisz_plik = File.AppendText(textBox13.Text);
+            //  zapisz_plik.WriteLine(textBox9.Text);
+            //  zapisz_plik.Close();
+
+            StreamReader odczytaj_plik;
+            odczytaj_plik = File.OpenText(textBox13.Text);
+            textBox12.Text = odczytaj_plik.ReadLine();
+            odczytaj_plik.Close();
+
+
+
+
+
+        }
+
+        private void Form1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                groupBox6.Show();
+                groupBox9.Show();
+                groupBox10.Show();
+                groupBox11.Show();
+            }
+            else
+            {
+                groupBox6.Hide();
+                groupBox9.Hide();
+                groupBox10.Hide();
+                groupBox11.Hide();
+            }
+
+            if (checkBox2.Checked)
+            {
+                groupBox7.Show();
+                groupBox8.Show();
+                groupBox12.Show();
+                groupBox13.Show();
+            }
+            else
+            {
+                groupBox7.Hide();
+                groupBox8.Hide();
+                groupBox12.Hide();
+                groupBox13.Hide();
+            }
+        }
+    }
+}
