@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsAppFlagi
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+            pictureBox9.Visible = false;
+            pictureBox10.Visible = false;
+            pictureBox11.Visible = false;
+            pictureBox12.Visible = false;
+            pictureBox13.Visible = false;
+            pictureBox14.Visible = false;
+            pictureBox15.Visible = false;
+            pictureBox16.Visible = false;
+            pictureBox17.Visible = false;
+            pictureBox18.Visible = false;
+            pictureBox19.Visible = false;
+            pictureBox20.Visible = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if((textBox1.Text=="Albania")||(textBox1.Text == "ALBANIA")||(textBox1.Text == "albania")) pictureBox1.Visible = true;
+            else pictureBox1.Visible = false;
+            if ((textBox1.Text == "Andora") || (textBox1.Text == "ANDORA") || (textBox1.Text == "andora")) pictureBox2.Visible = true;
+            else pictureBox2.Visible = false;
+            if ((textBox1.Text == "Austria") || (textBox1.Text == "AUSTRIA") || (textBox1.Text == "austria")) pictureBox3.Visible = true;
+            else pictureBox3.Visible = false;
+            if ((textBox1.Text == "Belgia") || (textBox1.Text == "BELGIA") || (textBox1.Text == "belgia")) pictureBox4.Visible = true;
+            else pictureBox4.Visible = false;
+            if ((textBox1.Text == "Bialorus") || (textBox1.Text == "BIALORUS") || (textBox1.Text == "bialorus")) pictureBox5.Visible = true;
+            else pictureBox5.Visible = false;
+            if ((textBox1.Text == "Bosnia i Hercegowina") || (textBox1.Text == "BOSNIA I HERCEGOWINA") || (textBox1.Text == "bosnia i hercegowina")) pictureBox6.Visible = true;
+            else pictureBox6.Visible = false;
+            if ((textBox1.Text == "Bulgaria") || (textBox1.Text == "BULGARIA") || (textBox1.Text == "bulgaria")) pictureBox7.Visible = true;
+            else pictureBox7.Visible = false;
+            if ((textBox1.Text == "Chorwacja") || (textBox1.Text == "CHORWACJA") || (textBox1.Text == "chorwacja")) pictureBox8.Visible = true;
+            else pictureBox8.Visible = false;
+            if ((textBox1.Text == "Czarnogora") || (textBox1.Text == "CZARNOGORA") || (textBox1.Text == "czarnogora")) pictureBox9.Visible = true;
+            else pictureBox9.Visible = false;
+            if ((textBox1.Text == "Czechy") || (textBox1.Text == "CZECHY") || (textBox1.Text == "czechy")) pictureBox10.Visible = true;
+            else pictureBox10.Visible = false;
+            if ((textBox1.Text == "Dania") || (textBox1.Text == "DANIA") || (textBox1.Text == "dania")) pictureBox11.Visible = true;
+            else pictureBox11.Visible = false;
+            if ((textBox1.Text == "Estonia") || (textBox1.Text == "ESTONIA") || (textBox1.Text == "estonia")) pictureBox12.Visible = true;
+            else pictureBox12.Visible = false;
+            if ((textBox1.Text == "Finlandia") || (textBox1.Text == "FINLANDIA") || (textBox1.Text == "finlandia")) pictureBox13.Visible = true;
+            else pictureBox13.Visible = false;
+            if ((textBox1.Text == "Francja") || (textBox1.Text == "FRANCJA") || (textBox1.Text == "francja")) pictureBox14.Visible = true;
+            else pictureBox14.Visible = false;
+            if ((textBox1.Text == "Grecja") || (textBox1.Text == "GRECJA") || (textBox1.Text == "grecja")) pictureBox15.Visible = true;
+            else pictureBox15.Visible = false;
+            if ((textBox1.Text == "Hiszpania") || (textBox1.Text == "HISZPANIA") || (textBox1.Text == "hiszpania")) pictureBox16.Visible = true;
+            else pictureBox16.Visible = false;
+            if ((textBox1.Text == "Holandia") || (textBox1.Text == "HOLANDIA") || (textBox1.Text == "holandia")) pictureBox17.Visible = true;
+            else pictureBox17.Visible = false;
+            if ((textBox1.Text == "Irlandia") || (textBox1.Text == "IRLANDIA") || (textBox1.Text == "irlandia")) pictureBox18.Visible = true;
+            else pictureBox18.Visible = false;
+            if ((textBox1.Text == "Islandia") || (textBox1.Text == "ISLANDIA") || (textBox1.Text == "islandia")) pictureBox19.Visible = true;
+            else pictureBox19.Visible = false;
+            if ((textBox1.Text == "Kazachstan") || (textBox1.Text == "KAZACHSTAN") || (textBox1.Text == "kazachstan")) pictureBox20.Visible = true;
+            else pictureBox20.Visible = false;
+        }
+    }
+}
