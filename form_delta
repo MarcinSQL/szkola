@@ -1,0 +1,183 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsAppDelta
+{
+    public partial class Form1 : Form
+    {
+        float a, b, c, d;
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.Empty;
+            label5.BackColor = Color.Empty;
+            label6.BackColor = Color.Empty;
+            label7.ResetText();
+            label8.ResetText();
+            label9.ResetText();
+            textBox1.ResetText();
+            textBox2.ResetText();
+            textBox3.ResetText();
+        }
+
+        private void wprowadźKodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            label10.Enabled = true;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            if((comboBox1.Text=="1")&&(comboBox2.Text=="2")&&(comboBox3.Text=="3"))
+            {
+                label1.Enabled = true;
+                label2.Enabled = true;
+                label3.Enabled = true;
+                textBox1.Enabled = true;
+                textBox2.Enabled = true;
+                textBox3.Enabled = true;
+                operacjeToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void obliczToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((textBox1.Text == "") && (textBox2.Text == "") && (textBox3.Text == ""))
+            {
+                label4.BackColor = Color.Red;
+                label5.BackColor = Color.Red;
+                label6.BackColor = Color.Red;
+            }
+            else
+            {
+                a = int.Parse(textBox1.Text);
+                b = int.Parse(textBox2.Text);
+                c = int.Parse(textBox3.Text);
+
+                d = (b * b) - (4 * a * c);
+                if (d > 0)
+                {
+                    label5.BackColor = Color.Green;
+                    label6.BackColor = Color.Green;
+                    label4.BackColor = Color.Red;
+                    label8.Text = Convert.ToString((-b - Math.Sqrt(d)) / (2 * a));
+                    label9.Text = Convert.ToString((-b + Math.Sqrt(d)) / (2 * a));
+                }
+                else if (d == 0)
+                {
+                    label4.BackColor = Color.Green;
+                    label7.Text = Convert.ToString(((-b) / (2 * a)));
+                    label5.BackColor = Color.Red;
+                    label6.BackColor = Color.Red;
+
+                }
+                else
+                {
+                    label4.BackColor = Color.Red;
+                    label5.BackColor = Color.Red;
+                    label6.BackColor = Color.Red;
+                }
+            }
+        }
+
+        private void wyczyśćToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.Empty;
+            label5.BackColor = Color.Empty;
+            label6.BackColor = Color.Empty;
+            label7.ResetText();
+            label8.ResetText();
+            label9.ResetText();
+            textBox1.ResetText();
+            textBox2.ResetText();
+            textBox3.ResetText();
+        }
+
+        private void zamknijProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.Close();
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.Empty;
+            label5.BackColor = Color.Empty;
+            label6.BackColor = Color.Empty;
+            label7.ResetText();
+            label8.ResetText();
+            label9.ResetText();
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            label1.Enabled = false;
+            label2.Enabled = false;
+            label3.Enabled = false;
+            label10.Enabled = false;
+            operacjeToolStripMenuItem.Enabled = false;
+            oAutorzeToolStripMenuItem.Enabled = false;
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if ((textBox1.Text=="") && (textBox2.Text=="") && (textBox3.Text==""))
+            {
+                label4.BackColor = Color.Red;
+                label5.BackColor = Color.Red;
+                label6.BackColor = Color.Red;
+            }
+            else
+            {
+                a = int.Parse(textBox1.Text);
+                b = int.Parse(textBox2.Text);
+                c = int.Parse(textBox3.Text);
+
+                d = (b * b) - (4 * a * c);
+                if (d > 0)
+                {
+                    label5.BackColor = Color.Green;
+                    label6.BackColor = Color.Green;
+                    label4.BackColor = Color.Red;
+                    label8.Text = Convert.ToString((-b - Math.Sqrt(d)) / (2 * a));
+                    label9.Text = Convert.ToString((-b + Math.Sqrt(d)) / (2 * a));
+                }
+                else if (d == 0)
+                {
+                    label4.BackColor = Color.Green;
+                    label7.Text = Convert.ToString(((-b) / (2 * a)));
+                    label5.BackColor = Color.Red;
+                    label6.BackColor = Color.Red;
+
+                }
+                else
+                {
+                    label4.BackColor = Color.Red;
+                    label5.BackColor = Color.Red;
+                    label6.BackColor = Color.Red;
+                }
+            }
+        }
+    }
+}
