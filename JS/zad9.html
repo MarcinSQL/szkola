@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia w JS</title>
+    <style>
+        .tlo{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>Kliknij mnie</button> -->
+    <div class="x">Wspolrzedne X kurora myszy: 0</div>
+    <div class="y">Wspolrzedne Y kurora myszy: 0</div>
+    <div class="klawisz">Nacisnieto klawisz: a</div>
+
+    <script>
+
+        const divX = document.querySelector('div.x');
+        const divY = document.querySelector('div.y');
+        const divKlawisz = document.querySelector('div.klawisz');
+
+        //napiszemy kod, ktory w diwach 'x' i 'y' umiesci aktualne wspolrzedne myszy
+        document.addEventListener('mousemove', (event)=>{
+            divX.textContent = 'Wspolrzedna X kursora myszy: ' + event.clientX;
+            divY.textContent = 'Wspolrzedna Y kursora myszy: ' + event.clientY;
+        });
+
+        //napiszemy kod, ktory w divie 'klawisz' umiesci wciskane klawisze
+        document.addEventListener('keydown', (event)=>{
+        //    divKlawisz.textContent = 'Nacisnieto klawisz: ' + event.key;
+        //    divKlawisz.innerHTML = 'Nacisnieto klawisz: <br>';
+            divKlawisz.textContent += event.key;
+        });
+
+        //const btn = document.querySelector('button');
+        //
+        //const zmienTlo = function(){
+        //    document.body.classList.toggle('tlo');
+        //};
+        //
+        ////przypisujemy zdarzenie klikniecia mysza na button
+        //btn.addEventListener('click', zmienTlo);
+    </script>
+</body>
+</html>

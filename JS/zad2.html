@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Zmienne w JS</title>
+</head>
+<body>
+
+	<script>
+		//typ danych jest zwiazany z wartoscia zmiennej
+		var liczba1 = 10;
+		let liczba2 = 20;
+		const liczba3 = 30;	//nie da sie zmieniac typu tej zmiennej w trakcie skryptu
+		
+		console.log(liczba1, liczba2, liczba3);
+		
+		//I sposob - operator konkatenacji
+		document.write('Pierwsza zmienna to: ' + liczba1 + ', druga zmienna to: ' + liczba2 + ', trzecia zmienna to: ' + liczba3);
+		
+		document.write('<br>');	//uzycie znaku HTML w JS
+		
+		//II sposob - 'grawis'
+		document.write(`Pierwsza zmienna to: ${liczba1 + 5}, druga zmienna to: ${liczba2 * 10}, trzecia zmienna to: ${liczba3 - 1}`);
+	</script>
+</body>
+</html>

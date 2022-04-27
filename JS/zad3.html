@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Instrukcje warunkowe w JS</title>
+</head>
+<body>
+
+	<script>
+		//skladnia instrukcji warunkowej
+		//if(warunek){
+		//	instrukcje, ktore sie wykonaja jezeli warunek jest spelniony
+		//}
+		//else{
+		//	instrukcje, ktore sie wykonaja jezeli warunek nie jest spelniony
+		//}
+		
+		const liczba = 123;
+		
+		if(liczba > 0) console.log('Podana liczba jest wieksza od 0');
+		else if(liczba == 0) console.log('Podana liczba jest rowna 0');
+		else console.log('Podana liczba jest mniejsza od 0');
+		
+		//operator warunkowy ' ? : '
+		const l1 = 10;
+		const l2 = 20;
+		// l1 > l2 ? console.log('Liczba l1 jest wieksza') : console.log('Liczba l2 jest wieksza');
+		const wynik = l1 > l2 ? 'Liczba l1 jest wieksza' : 'Liczba l2 jest wieksza';
+		console.log(wynik);
+		
+		//instrukcja wyboru switch...case
+		const dzienTygodnia = 3;
+		
+		switch(dzienTygodnia){
+			case 1:
+				console.log('Poniedzialek');
+				break;
+			case 2:
+				console.log('Wtorek');
+				break;
+			case 3:
+				console.log('Sroda');
+				break;
+			case 4:
+				console.log('Czwartek');
+				break;
+			case 5:
+				console.log('Piatek');
+				break;
+			case 6:
+				console.log('Sobota');
+				break;
+			case 7:
+				console.log('Niedziela');
+				break;
+			default:
+				console.log('Podales zla liczbe');
+		}
+	</script>
+</body>
+</html>

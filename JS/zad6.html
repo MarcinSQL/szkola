@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcje w JS</title>
+</head>
+<body>
+    <script>
+        //tworzenie funkcji
+        //sposob I
+        function suma(l1, l2){
+            //cialo funkcji
+            document.write(l1 + l2);
+            document.write('<br>');
+        }
+        suma(123, 422); //wywolanie funkcji
+        suma(1, 2);
+
+        //II sposob
+        const odejmowanie = function(l1, l2){
+            //cialo funkcji
+            const wynik = l1 - l2;
+            return wynik;
+            //ten kod sie nie wykona
+            document.write('<br>');
+        };
+        document.write(odejmowanie(100, 50));
+        let a = odejmowanie(10, 20);
+        document.write(a);
+
+        //III sposob
+        const mnozenie = (l1, l2) => {
+            return l1 * l2;
+        };
+        console.log(mnozenie(123, 3243));
+    </script>
+</body>
+</html>

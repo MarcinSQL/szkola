@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="number" name="liczba1">
+            <input type="number" name="liczba2">
+        </div>
+        <div>
+            <label>Wybierz dzialanie do wykonania: </label>
+            <div>
+                <button type="button" class="dodawanie">+</button>
+                <button class="odejmowanie">-</button>
+                <button class="mnozenie">*</button>
+                <button class="dzielenie">/</button>
+            </div>
+        </div>
+    </form>
+    <div>Wynik dzialania: </div>
+    <input type="text" name="wynik">
+
+    <script>
+        const btnDodaj = document.querySelector('button.dodawanie');
+        const btnOdejmij = document.querySelector('button.odejmowanie');
+        const btnMnoz = document.querySelector('button.mnozenie');
+        const btnDziel = document.querySelector('button.dzielenie');
+        
+        const poleLiczba1 = document.querySelector('input[name="liczba1"]');
+        const poleLiczba2 = document.querySelector('input[name="liczba2"]');
+        const poleWynik = document.querySelector('input[name="wynik"]');
+
+        const suma = function(){
+            poleWynik.value = parseInt(poleLiczba1.value) + poleLiczba2.value * 1;
+        };
+        const roznica = function(e){
+            poleWynik.value = poleLiczba1.value - poleLiczba2.value;
+            e.preventDefault();
+        };
+        const iloczyn = function(e){
+            poleWynik.value = poleLiczba1.value * poleLiczba2.value;
+            e.preventDefault();
+        };
+        const iloraz = function(e){
+            poleWynik.value = poleLiczba1.value / poleLiczba2.value;
+            e.preventDefault();
+        };
+
+        btnDodaj.addEventListener('click', suma);
+        btnOdejmij.addEventListener('click', roznica);
+        btnMnoz.addEventListener('click', iloczyn);
+        btnDziel.addEventListener('click', iloraz);
+    </script>
+</body>
+</html>

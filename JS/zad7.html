@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekty w JS</title>
+</head>
+<body>
+    <script>
+        const fordzik = {
+            //definicja obiektu
+            marka: 'Ford',
+            model: 'Focus',
+            kolor: 'czerwony',
+        };
+
+        console.log(fordzik);
+        document.write('Moj samochod ma kolor: ' + fordzik.kolor);
+        fordzik.kolor = 'niebieski';
+        document.write('<br>');
+        document.write('Moj samochod ma kolor: ' + fordzik.kolor);
+
+        //klasy w JS
+        class Samochod{
+            constructor(marka,model,kolor){
+                this.marka = marka;
+                this.model = model;
+                this.kolor = kolor;
+            }
+            iloscKol = 4;   //tego raczej sie unika ale mozna jak ktos chce
+
+            zmienKolor(nowyKolor){
+                this.kolor = nowyKolor;
+            }
+        }
+
+        //tworzymy obiekt na podstawie klasy samochod
+        const kijanka = new Samochod('KIA','Creed','brazowy');
+        console.log(kijanka);
+        const fiacik = new Samochod('Fiat','Punto','zielony');
+        console.log('Kolor fiata: ' + fiacik.kolor);
+
+        console.log(kijanka.iloscKol);
+        kijanka.iloscKol = 5;
+        console.log(kijanka.iloscKol);
+        console.log(fiacik.iloscKol);
+        console.log('///////////////////////');
+        console.log('Kolor przed zmiana: ' + kijanka.kolor);
+        kijanka.zmienKolor('pomaranczowy');
+        console.log('Kolor po zmianie: ' + kijanka.kolor);
+    </script>
+</body>
+</html>

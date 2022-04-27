@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tablice w JS</title>
+</head>
+<body>
+
+	<script>
+		//const liczba1 = 10;
+		//const liczba2 = 20;
+		//const liczba3 = 30;
+		
+		//const liczby = [10 , 20 , 30]; //mozna dodawac rozne typy ze soba w jednej tablicy  ..."ala", true, [1,2,3]...
+		
+		//console.log(liczba1);
+		//console.log(liczba2);
+		//// liczby[0];	//liczba 10
+		//console.log('Z tablicy: ' + liczby[2]);	//numerujemy od 0 elementy w tablicy
+		//console.log(liczby);	//pokazuje dlugosc tablicy
+		
+		//Przyklad uzycia tablicy
+		const liczbyLosowe = [];
+		//zapelniamy tablice 100 losowymi liczbami
+		for(let i = 0; i < 100; i++){
+			liczbyLosowe[i] = Math.round(Math.random() * 100);
+		}
+		
+		//wyswietlamy zawartosc tablicy
+		document.write('Wyswietlenie zawartosci tablicy przy uzyciu petli: <br>');
+		for(let i = 0; i < liczbyLosowe.length; i++){
+			document.write(liczbyLosowe[i] + ' ');
+		}
+		document.write('<br><br>');
+		document.write('Wyswietlenie zawartosci tablicy przy uzyciu metody join: <br>');
+		document.write(liczbyLosowe.join(', '));
+		
+		document.write('<br><br>');
+		//obliczmy sume liczby tablicy
+		let suma = 0;
+		
+		//liczbyLosowe.forEach((liczba) => {
+		//	suma = suma + liczba;
+		//});
+		
+		for(let i = 0; i < liczbyLosowe.length; i++){
+			suma = suma + liczbyLosowe[i];
+		}
+		
+		document.write('Suma liczb tablicy wynosi: ' + suma);
+	</script>
+</body>
+</html>
